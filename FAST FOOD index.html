@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Abuja Fast Food</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        html{
+            scroll-behavior:smooth;
+        }
+
+        body{
+            font-family:Arial, sans-serif;
+            background:#0b1220;
+            color:white;
+        }
+
+        /* NAVBAR */
+        nav{
+            background:#111827;
+            padding:15px 40px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            position:sticky;
+            top:0;
+            z-index:1000;
+        }
+
+        nav h2{
+            color:#38bdf8;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin-left:20px;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:#38bdf8;
+        }
+
+        /* HERO SECTION */
+        .hero{
+            height:350px;
+            background:
+            linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+            url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80');
+            background-size:cover;
+            background-position:center;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            animation:zoomBg 8s infinite alternate ease-in-out;
+        }
+
+        @keyframes zoomBg{
+            from{
+                background-size:100%;
+            }
+            to{
+                background-size:110%;
+            }
+        }
+
+        .hero-content h1{
+            font-size:45px;
+            color:#38bdf8;
+            animation:glow 2s infinite alternate;
+        }
+
+        .hero-content p{
+            margin-top:10px;
+            font-size:18px;
+        }
+
+        @keyframes glow{
+            from{
+                text-shadow:0 0 5px #38bdf8;
+            }
+
+            to{
+                text-shadow:0 0 20px #38bdf8;
+            }
+        }
+
+        /* SECTION */
+        .section{
+            padding:50px 20px;
+            text-align:center;
+        }
+
+        h2{
+            color:#38bdf8;
+            margin-bottom:25px;
+        }
+
+        /* MENU */
+        .menu{
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:25px;
+        }
+
+        .card{
+            background:#1e293b;
+            width:250px;
+            border-radius:15px;
+            overflow:hidden;
+            transition:0.4s;
+        }
+
+        .card:hover{
+            transform:translateY(-12px) scale(1.05);
+            box-shadow:0 0 25px rgba(56,189,248,0.5);
+        }
+
+        .card img{
+            width:100%;
+            height:180px;
+            object-fit:cover;
+            transition:0.5s;
+        }
+
+        .card:hover img{
+            transform:scale(1.1);
+        }
+
+        .card h3{
+            margin:15px 0 10px;
+        }
+
+        .price{
+            color:#22c55e;
+            font-weight:bold;
+            margin-bottom:15px;
+        }
+
+        /* BUTTON */
+        .btn{
+            display:inline-block;
+            background:#22c55e;
+            color:white;
+            text-decoration:none;
+            padding:14px 25px;
+            border-radius:10px;
+            font-size:18px;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            transform:scale(1.08);
+        }
+
+        footer{
+            background:#111827;
+            padding:20px;
+            text-align:center;
+            margin-top:40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <h2>Abuja Fast Food</h2>
+
+        <div>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Abuja Fast Food 🍔</h1>
+            <p>Fresh meals • Fast delivery • Premium taste</p>
+        </div>
+    </div>
+
+    <!-- MENU -->
+    <div class="section" id="menu">
+        <h2>🔥 Our Menu</h2>
+
+        <div class="menu">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80">
+                <h3>Fried Rice</h3>
+                <p class="price">₦4,000</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb92?auto=format&fit=crop&w=800&q=80">
+                <h3>Chicken & Chips</h3>
+                <p class="price">₦5,000</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80">
+                <h3>Burger</h3>
+                <p class="price">₦3,500</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="section" id="about">
+        <h2>📍 About Us</h2>
+
+        <p>
+            We serve tasty and affordable meals in Abuja with fast delivery.
+        </p>
+
+        <br>
+
+        <p>🚚 Fast delivery across Abuja</p>
+
+        <br>
+
+        <p><strong>Opening Hours</strong></p>
+        <p>Monday - Saturday: 8AM - 10PM</p>
+        <p>Sunday: 12PM - 8PM</p>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="section" id="contact">
+        <h2>📲 Order Now</h2>
+
+        <a class="btn"
+        href="https://wa.me/2349161677718"
+        target="_blank">
+            Order on WhatsApp
+        </a>
+    </div>
+
+    <footer>
+        <p>📍 Abuja, Nigeria</p>
+        <p>📞 09161677718</p>
+        <p>© 2026 Abuja Fast Food</p>
+    </footer>
+
+</body>
+</html>
